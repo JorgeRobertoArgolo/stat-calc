@@ -2,6 +2,8 @@ import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons'; 
 import { colors } from '@/styles/colors';
 import { Card } from '../Card';
+import { router } from 'expo-router';
+
 
 export const FrequencySection = () => {
     return (
@@ -26,6 +28,7 @@ export const FrequencySection = () => {
                 subtitle='Para dados discretos'
                 content='Ideal para dados que podem ser listados individualmente. 
                     Calcula FA, FR, FAc e FRc para cada valor único.'
+                onPress={() => router.push('/simple-frequency')}
             />
 
             <Card 
@@ -34,6 +37,7 @@ export const FrequencySection = () => {
                 subtitle='Para dados em classes'
                 content='Utiliza a Regra de Sturges para agrupar dados em intervalos de classe. 
                     Ideal para grandes conjuntos de dados.'
+                onPress={() => router.push('/continuous-frequency')}
             />
 
             <View className="bg-card/40 border border-border rounded-[24px] p-6">
