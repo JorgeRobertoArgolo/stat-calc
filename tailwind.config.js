@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-//const { colors } = require('./src/styles/colors')
+const { colors } = require('./src/styles/colors')
 
 module.exports = {
   // NOTE: Update this to include the paths to all files that contain Nativewind classes.
@@ -7,7 +7,7 @@ module.exports = {
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
-        //colors,
+        colors,
         fontSize: {
             sm: '14px',
             base: '16px',
