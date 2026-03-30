@@ -22,6 +22,7 @@ export default function RootLayout () {
 
                 {/** Tabelas de Frequência Contínua */}
                 <Stack.Screen name='continuous-frequency' />
+                <Stack.Screen name='continuous-frequency-results' />
 
             </Stack>
         </QueryClientProvider>
