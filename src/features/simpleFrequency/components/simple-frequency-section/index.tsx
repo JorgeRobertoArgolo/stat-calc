@@ -7,6 +7,8 @@ import {
     ScrollView 
 } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import { router } from 'expo-router';
+
 import { colors } from '@/styles/colors';
 
 export const SimpleFrequencySection = () => {
@@ -21,6 +23,15 @@ export const SimpleFrequencySection = () => {
 
     // Verifica se o botão de gerar deve estar habilitado
     const isReady = data.trim().length > 0;
+
+    const handleGenerateTable = () => {
+        if (isReady) {
+            router.push({
+                pathname: '/simple-frequency-results',
+                params: { rawData: data } 
+            });
+        }
+    };
 
     return (
         <ScrollView className="px-6" showsVerticalScrollIndicator={false}>
@@ -89,6 +100,7 @@ export const SimpleFrequencySection = () => {
                     opacity: isReady ? 1 : 0.5 
                 }}
                 className="rounded-2xl py-5 items-center justify-center shadow-xl mb-10"
+                onPress={handleGenerateTable}
             >
                 <Text className={`font-bold text-lg ${isReady ? 'text-white' : 'text-muted-foreground'}`}>
                     Gerar Tabela

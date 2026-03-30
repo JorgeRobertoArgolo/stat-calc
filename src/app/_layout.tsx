@@ -13,9 +13,16 @@ export default function RootLayout () {
             <Stack screenOptions={{
                 headerShown: false,
             }}>
+                {/** Home */}
                 <Stack.Screen name='home' />
-                <Stack.Screen name='continuous-frequency' />
+
+                {/** Tabelas de Frequência Simples */}
                 <Stack.Screen name='simple-frequency' />
+                <Stack.Screen name='simple-frequency-results' />
+
+                {/** Tabelas de Frequência Contínua */}
+                <Stack.Screen name='continuous-frequency' />
+
             </Stack>
         </QueryClientProvider>
     );

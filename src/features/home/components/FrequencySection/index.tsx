@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons'; 
 import { colors } from '@/styles/colors';
 import { Card } from '../Card';
