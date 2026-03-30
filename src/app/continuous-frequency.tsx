@@ -1,9 +1,12 @@
-import { Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Header } from '@/features/shared/components/Header';
+import { ContinuousFrequencySection } from '@/features/continuousFrequency/components/continuous-frequency-section';
 
-export default function Home () {
+export default function ContinuousFrequency() {
     return (
-        <View>
-            <Text>Tela de Frequência Contínua</Text>
-        </View>
-    )
+        <SafeAreaView className="flex-1 bg-background">
+            <Header type="secondary" />
+            <ContinuousFrequencySection />
+        </SafeAreaView>
+    );
 }
