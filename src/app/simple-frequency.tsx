@@ -1,12 +1,12 @@
-import { Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Header } from '@/features/shared/components/Header';
+import { SimpleFrequencySection } from '@/features/simpleFrequency/components/simple-frequency-section';
 
-export default function Home () {
+export default function SimpleFrequency() {
     return (
-        <SafeAreaView>
-            <View>
-                <Text>Tela de Frequência Simples</Text>
-            </View>
+        <SafeAreaView className="flex-1 bg-background">
+            <Header type="secondary" />
+            <SimpleFrequencySection />
         </SafeAreaView>
-    )
+    );
 }
